@@ -1,8 +1,11 @@
+-- MAIN FILE
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
  
-entity Lab3_trafficlight is
+entity trafficlight is
 generic(ClockFrequencyHz : integer);
 port( 
     -- Input
@@ -17,7 +20,7 @@ port(
     ptl_green   : out std_logic); -- pedestrian traffic light green
 end entity;
  
-architecture rtl of Lab3_trafficlight is
+architecture rtl of trafficlight is
     
     type t_State is (start, start_ped, ped_green, stop, -- Enumerated type declaration and state signal declaration
                         stop_next, stop_delay);
