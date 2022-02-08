@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
  
-entity Lab3_finitestatemachine is
+entity finitestatemachine is
 end entity;
  
-architecture sim of Lab3_finitestatemachine is
+architecture sim of finitestatemachine is
  
     -- Low clock frequency to speed up the simulation
     constant ClockFrequencyHz : integer := 100; -- 100 Hz
@@ -22,7 +22,7 @@ architecture sim of Lab3_finitestatemachine is
 begin
  
     -- The Device Under Test (DUT)
-    i_TrafficLights : entity work.Lab3_trafficlight(rtl) -- instance of Lab3_trafficlight with architecture rtl
+    i_TrafficLights : entity work.trafficlight(rtl) -- instance of trafficlight with architecture rtl
     generic map(ClockFrequencyHz => ClockFrequencyHz)
     port map (
         Clk         => Clk,
